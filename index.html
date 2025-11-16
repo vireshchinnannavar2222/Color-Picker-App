@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Picker App</h1>
+        
+        <div class="color-box" id="colorBox"></div>
+        
+        <div class="picker-section">
+            <label for="colorPicker">Pick a color:</label>
+            <input type="color" id="colorPicker" value="#3498db">
+            <span id="colorCode">#3498db</span>
+        </div>
+        
+        <button id="saveBtn">Save Color</button>
+        
+        <div class="saved-colors">
+            <h2>Saved Colors</h2>
+            <div id="colorList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

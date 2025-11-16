@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.color-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: #3498db;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.picker-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.picker-section label {
+    font-weight: 600;
+    color: #555;
+}
+
+#colorPicker {
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#colorCode {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+#saveBtn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#saveBtn:hover {
+    transform: translateY(-2px);
+}
+
+#saveBtn:active {
+    transform: translateY(0);
+}
+
+.saved-colors {
+    margin-top: 30px;
+}
+
+.saved-colors h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#colorList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+}
+
+.saved-color-item {
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.saved-color-item:hover {
+    transform: scale(1.1);
+}
+
+.saved-color-item .delete-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: none;
+}
+
+.saved-color-item:hover .delete-btn {
+    display: block;
+}
